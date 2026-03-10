@@ -26,7 +26,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
             position.after(msgError);
 
-        } else {
+        } 
+
+        if (usn === "" || pass.length <= 8) {
+            
+            let msgError = document.createElement("q");
+            msgError.id = "msgError1";
+            msgError.style.color = "red";
+            msgError.style.fontSize = "12px";
+            msgError.style.marginLeft = "5px";
+            msgError.style.textAlign = "left";
+
+            msgError.textContent = "Password Minimal Memiliki 8 karakter!";
+
+            errorBefore.remove()
+            position.after(msgError)
+        }
+
+        else {
 
             window.location.href = "https://www.instagram.com/si_uajy";
 
